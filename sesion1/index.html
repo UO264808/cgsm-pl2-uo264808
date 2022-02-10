@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2021-2022)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Lucas Pérez Capellán</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>1</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>El principal objetivo de esta primera práctica de la asignatura es realizar un primer acercamiento al estándar
+                   WebGL especializado en gráficos 3D en la Web. Se trata de una adaptación del estándar OpenGL, de muy amplia utilización
+                   en el ámbito de las aplicaciones con gráficos 2D y 3D.
+                   <br>
+                   El primer paso ha sido realizar la preparación <del></del> entorno de trabajo: descargando, instalando y configurando las diferentes
+                   herramientas a utilizar durante el desarrollo de las prácticas.
+                   A continuación se comenta brevemente algunos aspectos que resultaron de interés para la preparación de las herramientas:
+                </p>
+                   <ul>
+                    <li><i>Visual Studio Code:</i> Este editor de texto ya estaba instalado en mi equipo al haber sido utilizado para desarrollo en otras asignaturas
+                        y en proyectos personales. Por lo tanto, ya estaba familiarizado con su uso.</li>
+                   <li><i>Git:</i> El repositorio donde realizar un control de versiones de estas prácticas fue creado en Github.</li>
+                   <li><i>Webpack:</i> No hubo ningún problema a la hora de añadir este bundler como dependencia del proyecto.</li>
+                   <li><i>Npm:</i> Este gestor de dependencias se instala junto a Node.js. Dado que las práctica se ha desarrollado en mi equipo personal, que tiene
+                    instalado Linux Mint 20.1 como SO (basado en Debian), tuve que hacer alguna operación extra respecto a la instalación en Windows. Dado que las versiones de npm y Node.js del package manager de Debian/Ubuntu
+                    son muy antiguas (anteriores a la versión 12). Para solucionar esto, utilicé la herramienta nvm (Node Version manager) para poder acceder a la última versión LTS (16.14.0) de Node.</li>
+                   </ul>
+                <p>
+                   Ya entrando en el contenido propiamente dicho de la práctica, primero se han visto unos conceptos básicos, como la organización de los ficheros de scripts, hojas de estilo, etc.
+                   Para así poder crear una primera página web mínima que verifique si en el navegador donde se visualiza tiene habilitado WebGL. A modo de comparación con un
+                   lenguaje de programación, ésto se podría considerar un <i>Hello World</i>.
+                   <br>
+                   A continuación se comprobó como se pueden crear distintas formas geométricas con varios tipos de materiales mediante la utilización de la librería <i>three.js</i>. Primero se probó creando
+                   un cubo y después otras figuras como esferas y cilindros. También se probó a crear otro tipo de figras geométricas más complejas a partir de triángulos, en el caso del 
+                   ejercicio de la práctica: una casa.
+                   <br>
+                   Para finalizar, se explicaron algunos fundamentos sobre posicionamiento de la cámara, aplicar transformaciones lineales a las figuras y una breve explicación sobre los distintos tipos de luces.
+                </p>
+            <h2>Ejercicio 1</h2>
+                <p>Este primer ejercicio tan sólo sirve para comprobar si está activado o no el soporte del navegador de WebGL y en caso afirmativo notificar al usuario de ello por medio de un <code>alert()</code>.</p>
+                <iframe class="container" src="prac1-1.html" width="100%">                    
+                </iframe>
+            <h2>Ejercicio 2</h2>
+                <p>A modo de introducción a <i>three.js</i> en este ejercicio se ha de crear un cubo que sólo será percibido en 2D debido a la posición del mismo y de la orientación de la cámara.</p>
+                <iframe class="container" src="prac1-2.html" height="400px" width="100%">
+                    Escena 2
+                </iframe>
+            <h2>Ejercicio 3</h2>
+                <p>En este ejercicio, se tomará de base el cubo del anterior para aplicar una rotación y poder así percibir las 3 dimensiones.</p>
+                <iframe class="container" src="prac1-3.html" height="400px" width="100%">
+                    Escena 3
+                </iframe>
+            <h2>Ejercicio 4</h2>
+                <p>En este ejercicio se han de crear aparte del cubo un cilindro y una esfera, siendo necesario mover los objetos desde el origen de coordenadas para que no se solapen. También se añadieron distintos colores a los materiales.</p>
+                <iframe class="container" src="prac1-4.html" height="400px" width="100%">
+                    Escena 4
+                </iframe>
+            <h2>Ejercicio 5</h2>
+                <p>En este ejercicio, tomando como base el 4, se ha añadido una nueva figura geométrica con forma de casa. Ésta fue creada por medio de triangulaciones y consta de puerta, tejado, aleros y chimenea.</p>
+                <iframe class="container" src="prac1-5.html" height="400px" width="100%">
+                    Escena 5
+                </iframe>
+            <h2>Ejercicio 6</h2>
+                <p>En este último ejercicio se pretende emplear diferentes tipos de materiales a las figuras creadas en el ejercicio 4. Los materiales seleccionados serán <i>Basic</i> para el cubo y la casa, <i>Lambert</i> para el cilindro y <i>Phong</i> para la esfera.
+                   Dado que los materiales <i>Lambert</i> y <i>Phong</i> requieren de una iluminación para ser visibles, se ha definido una luz de tipo <i>DirectionalLight</i>.
+                </p>
+                <iframe class="container" src="prac1-6.html" height="400px" width="100%">
+                    Escena 6
+                </iframe>
+            <h2>Dificultades encontradas</h2>
+            <p>
+                Aunque en general la práctica me ha resultado amena y fácil de seguir gracias al detalle con el que está documentado el guión, sí encontré cierta dificultad a la hora de realizar la figura de la casa en 2D. Con el código de ejemplo del guión no conseguí pintar el cuadrado agujereado. 
+                Sin embargo, con el ejemplo de la documentación de <code>BufferGeometry</code> de <i>three.js</i> sí pude entenderlo con más facilidad y utilizarlo como base para realizar la casa. La dificultad de ir dibujando la casa en base a triangulaciones sí me parecio superior en general a los
+                demás ejercicios de la práctica y me consumió bastante tiempo, pero he de reconocer que sirvió para afianzar conceptos relacionados con los productos vectoriales y las coordenas para ganar más soltura a la hora de manejar estos tipos de figuras.
+                A modo de comentario, sobre la última parte de materia de materiales y luces podría ser interesante añadir algo más de contenido. Por ejemplo, probar otros tipos de iluminación con otros materiales paraver los distintos tipos de efectos que generan. También sería interesante añadir texturas a los materiales.
+            </p>
+        </div>
+    </body>
+</html>
