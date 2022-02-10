@@ -17,7 +17,7 @@ document.body.appendChild( renderer.domElement );
 
 // Create camera a set a position
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
-camera.position.set( 0, 0, 7 );
+camera.position.set( 2, 0, 10 );
 
 // Create box object
 const geometry_box = new THREE.BoxGeometry( 1, 1, 1 );
@@ -41,6 +41,64 @@ const cylinder = new THREE.Mesh( geometry_cylinder, material_cylinder );
 cylinder.rotation.set( Math.PI / 5, Math.PI / 5, 0 );
 scene.add( cylinder );
 cylinder.position.set( 0, 0, 0 );
+
+// Create house object
+const geometry = new THREE.BufferGeometry();
+
+const vertices = new Float32Array( [
+	
+    // Main body of the house I
+    -1.0, -0.1,  1.0,
+	 1.0, -0.1,  1.0,
+	 1.0,  1.0,  1.0,
+
+    // Main body of the house II
+	 1.0,  1.0,  1.0,
+	-1.0,  1.0,  1.0,
+	-1.0, -0.1,  1.0,
+
+    // Main body of the house III
+    -1.0, -0.7, 1.0,
+    -0.3, -0.7, 1.0,
+    -0.3, -0.1, 1.0,
+
+    // Main body of the house IV
+    -1.0, -0.1, 1.0,
+    -1.0, -0.7, 1.0,
+    -0.3, -0.1, 1.0,
+
+    // Main body of the house V
+     0.3, -0.7, 1.0,
+     1.0, -0.7, 1.0,
+     0.3, -0.1, 1.0,
+
+    // Main body of the house VI
+     0.3, -0.1, 1.0,
+     1.0, -0.7, 1.0,
+     1-0, -0.1, 1.0,
+
+    // Roof
+    -1.3, 1.0, 1.0,
+     1.3, 1.0, 1.0,
+     0.0, 2.0, 1.0,
+
+    // Chimney I
+     0.3, 1.6, 1.0,
+     0.6, 2.0, 1.0,
+     0.3, 2.0, 1.0,
+
+    // Chimney II
+     0.6, 2.0, 1.0,
+     0.3, 1.6, 1.0,
+     0.6, 1.3, 1.0
+    
+] );
+
+geometry.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+const material = new THREE.MeshBasicMaterial( { color: 0xFFFFFF } );
+const house = new THREE.Mesh( geometry, material );
+scene.add(house);
+house.position.set( 6, 0, 0 );
 
 // Render objects into scene
 renderer.render( scene, camera );
