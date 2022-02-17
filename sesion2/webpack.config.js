@@ -1,5 +1,5 @@
 module.exports = {
-    mode: "development",
+    mode: "production",
     entry: {
         "prac2-1": './src/prac2-1.js',
         "prac2-2": './src/prac2-2.js',
@@ -11,7 +11,6 @@ module.exports = {
         "prac2-8": './src/prac2-8.js',
         "prac2-9": './src/prac2-9.js'
     },
-    devtool: 'inline-source-map',
     devServer: {
         static: {
             directory: __dirname

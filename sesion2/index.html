@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2021-2022)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Lucas Pérez Capellán</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>2</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>
+                   En esta segunda práctica de la asignatura se ha profundizado más en WebGL, introduciendo la utilización de texturas y shaders en objetos con
+                   el propósito de lograr un mayor realismo en las escenas. También se ha mostrado como aplicar distintos tipos de animaciones a objetos y la importación de modelos.
+                   <br>
+                   Para ilustrar los conceptos de esta sesión práctica se desarrolló una escena que represente parte de nuestro Sistema Solar. Concretamente la Tierra junto a la Estación 
+                   Internacional, la Luna y el Sol.
+                   Se ha de tener en cuenta que para que toda las escenas pudiesen ser visualizadas, existen un gran cantidad de incorreciones respecto a la escala y a las distancias.
+                </p>
+            <h2>Ejercicio 1</h2>
+                <p>De manera similar al ejercicio 1-3 de la práctica anterior, en este ejercicio se crea un cubo en 3D añadiéndole una textura para que se parezca a una caja del mundo real.</p>
+                <iframe class="container" src="prac2-1.html" height="400px" width="100%">                    
+                </iframe>
+            <h2>Ejercicio 2</h2>
+                <p>En este segundo ejercicio se ha de crear una esfera y añadirle una textura que se parezca a la Tierra. También se ha de añadir una luz de tipo PointLight que simule la iluminación proporcionada por el Sol.</p>
+                <iframe class="container" src="prac2-2.html" height="400px" width="100%">
+                    Escena 2
+                </iframe>
+            <h2>Ejercicio 3</h2>
+                <p>Tomando como punto de partida el globo terráqueo obtenido en el ejercicio anterior, aquí habrá que añadirle una nueva esfera trasparente texturizada que simule la atmósfera terrestre.</p>
+                <iframe class="container" src="prac2-3.html" height="400px" width="100%">
+                    Escena 3
+                </iframe>
+            <h2>Ejercicio 4</h2>
+                <p>En este cuarto ejercicio se ha de rotar el sistema Tierra-atmósfera para simular la inclinación de 23 grados que tiene en el mundo real.</p>
+                <iframe class="container" src="prac2-4.html" height="400px" width="100%">
+                    Escena 4
+                </iframe>
+            <h2>Ejercicio 5</h2>
+                <p>Ahora se procederá a añadir un nuevo astro, en este caso la Luna, la cual mantendrá la escala (0.27 Tierras) y distancia (aproximadamente 60 radios terrestres) reales respecto a la Tierra. Se ha creado de manera similar a la esfera de la Tierra añadiéndole una textura apropiada.</p>
+                <iframe class="container" src="prac2-5.html" height="400px" width="100%">
+                    Escena 5
+                </iframe>
+            <h2>Ejercicio 6</h2>
+                <p>En este ejercicio se ha animado el movimiento de rotación de la Tierra.</p>
+                <iframe class="container" src="prac2-6.html" height="400px" width="100%">
+                    Escena 6
+                </iframe>
+            <h2>Ejercicio 7</h2>
+                <p>En este ejercicio se ha animado el movimiento de traslación de la Luna sobre la Tierra. Teniendo en cuenta que la Luna trda 8 días terrestres en girar sobre la Tierra.</p>
+                <iframe class="container" src="prac2-7.html" height="400px" width="100%">
+                    Escena 7
+                </iframe>
+            <h2>Ejercicio 8</h2>
+                <p>En este ejercicio se ha realizado la implementación de 2 shaders. Uno será para el ruido del Sol y otro para la textura principal. Destacar que uno de ello es un shader de vértices y otro de fragmentos.</p>
+                <iframe class="container" src="prac2-8.html" height="400px" width="100%">
+                    Escena 8
+                </iframe>
+            <h2>Ejercicio 9</h2>
+                <p>En este ejercicio se ha realizado la carga de un modelo de la Estación Espacial Internacional desarrollado con una aplicacion de modelado 3D y posteriormente se situa y reescala en el escenario. Así obtenedremos una visión global de todos los elementos creados durante la realización de la práctica.
+                   <br>
+                    <b>IMPORTANTE:</b> En este ejercicio también se ha añadido la capacidad de que la Luna refleje su sombra contra la Tierra para simular un eclipse. Para ello se han seguido los pasos descritos en el siguiente <a href=http://learningthreejs.com/blog/2012/01/20/casting-shadows/>post</a>.
+                </p>
+                <iframe class="container" src="prac2-9.html" height="400px" width="100%">
+                    Escena 9
+                </iframe>
+            <h2>Dificultades encontradas</h2>
+            <p>
+               En general no he encontrado ninguna dificultad especialmente relevante durante la realización de la práctica. Por destacar algunos aspectos en los que perdí tiempo, uno fue la addición del movimiento de traslación a la Luna. También me resulto algo más complicado el manejar todo el tema de los shaders, 
+               ya que conlleva una mayor complejidad el cargar los shaders correctamente que las texturas normales.
+               <br>
+               Respecto a la adicción de la sombra de la Luna, siguiendo los pasos de la página web fue relativamente sencillo de lograr. Sólo resaltar que hubo que cambiar el tipo de luz de PointLight a directionalLight, pues sino el efecto de la sombra era muy pixelado.
+               <br>
+               Por último, reseñar que no pude eliminar la luz propia que emite la Estación Internacional, probablemente al ser un modelo cargado.
+            </p>
+        </div>
+    </body>
+</html>

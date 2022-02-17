@@ -17,7 +17,7 @@ document.body.appendChild( renderer.domElement );
 
 // Create camera a set a position
 const camera = new THREE.PerspectiveCamera ( 45, window.innerWidth / window.innerHeight, 1, 4000 );
-camera.position.set( 25, 0, 50 );
+camera.position.set( 25, 0, 30 );
 
 // Create and specify texture
 const mapUrl = "../textures/earth.gif";   // The file used as texture
@@ -147,8 +147,8 @@ sun.position.set( 40, 0, 0 );
 scene.add(sun);
 
 // Add light
-const light = new THREE.PointLight( 0xFFFFFFFF, 3);
-light.position.set( 95, 0, 0 );
+const light = new THREE.PointLight( 0xFFFFFFFF, 2);
+light.position.set( 40, 0, 0 );
 scene.add( light );
 
 // Animate the Earth and the atmosphere

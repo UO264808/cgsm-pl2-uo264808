@@ -69,7 +69,7 @@ scene.add( atm );
 atm.position.set( 0, 0, 0 );
 
 // Add light
-const light = new THREE.PointLight( 0xFFFFFFFF, 3);
+const light = new THREE.PointLight( 0xFFFFFFFF, 2);
 light.position.set( 95, 0, 0 );
 scene.add( light );
 

@@ -90,7 +90,7 @@ function animate( ) {
     earth.rotation.y += rotation;
     atm.rotation.y += rotation * 0.95;
     
-    const moon_translation = ( delta * Math.PI * 2 ) / (10);
+    const moon_translation = ( delta * Math.PI * 2 ) / (24 * 28);
     moonGroup.rotation.y += moon_translation;
 
     uniforms[ "time" ].value += 0.4 * delta;
