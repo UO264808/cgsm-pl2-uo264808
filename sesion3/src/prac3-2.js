@@ -9,6 +9,19 @@ window.addEventListener( 'resize', ( ) => {
     renderer.render( scene, camera );
 }, false );
 
+// Overlay
+const startButton = document.getElementById('startButton');
+startButton.addEventListener('click', () => init(), false);
+
+function init() {
+    var overlay = document.getElementById('overlay');
+    overlay.remove();
+
+    // Do stuff
+    const video = document.getElementById('video');
+    video.play();
+}
+
 // Create scene and renderer
 const scene = new THREE.Scene();
 const renderer = WEBGL.isWebGLAvailable() ? new THREE.WebGLRenderer( {antialias: true} ) : new THREE.CanvasRenderer();

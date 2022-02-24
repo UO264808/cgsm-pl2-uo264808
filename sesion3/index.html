@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2021-2022)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Lucas Pérez Capellán</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>3</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>
+                   En esta tercera práctica de la asignatura se ha profundizado más en la funcionalidad de WebGL y características adicionales de three.js, introduciendo la utilización de mapas topológicos en objetos con
+                   el propósito de lograr una mayor profundidad. También se ha mostrado como utilizar texturas de video, añadir controles para modificar parámetros de la escena y finalmente modificar modificar la posición de la cámara empleada simulando de esta forma
+                   el desplazamiento dentro de la escena.
+                </p>
+            <h2>Ejercicio 1</h2>
+                <p>
+                   En este ejercicio se ha utilizado en la escena un cubo como los empleados en las prácticas anteriores. En lugar de utilizar una simple textura se ha empleado una textura y un mapa topológico con el fin de darle un mayor nivel de realismo al cubo. Además 
+                   se ha de animar la escena para hacer girar el cubo sobre el eje Y.
+                </p>
+                <iframe class="container" src="prac3-1.html" height="400px" width="100%">                    
+                </iframe>
+            <h2>Ejercicio 2</h2>
+                <p>En este segundo ejercicio se ha de crear un plano que rote y al que añadir una textura de video. El movimiento de rotación es para observar como la textura de video desparece cuando no vemos la cara visible del plano.</p>
+                <iframe class="container" src="prac3-2.html" height="400px" width="100%">
+                    Escena 2
+                </iframe>
+            <h2>Ejercicio 3</h2>
+                <p>Tomando como punto de partida el cubo del primer ejercicio, aquí habrá que añadirle un control que permita cambiar la propiedad <i>BumpScale</i> y otro que nos permita ver estadísticas de la animación como el <i>framerate</i>.</p>
+                <iframe class="container" src="prac3-3.html" height="400px" width="100%">
+                    Escena 3
+                </iframe>
+            <h2>Ejercicio 4</h2>
+                <p>
+                   En este último ejercicio se ha de crear una escena compuesta por un grid a modo de suelo y dos cubos texturizados con una cara distinta con un botón incrustado. Para una mejor regulación de la luz se ha utilizado una luz hemisférica.
+                   <br>
+                   También se añadieron unos controles que permitan a la cámara desplazarse por la escena como si se tratase de visión en primera persona.
+                </p>
+                <iframe class="container" src="prac3-4.html" height="400px" width="100%">
+                    Escena 4
+                </iframe>
+            <h2>Dificultades encontradas</h2>
+            <p>
+               En general no he encontrado ninguna dificultad especialmente relevante durante la realización de la práctica. Me ha resultado más fácil de completar que la anterior del Sistema Solar.
+               <br>
+               Tan sólo reseñar que a la hora de crear el reporte de la práctica el ejercicio 2 no funcionaba dentro del iframe. Esto es debido a que la configuración por defecto de algunos navegadores
+               prohibe la reproducción automática de vídeo (He probado en Mozilla Firefox y en Chromium). Para solucionarlo se han descargado del campus los archivos del overlay para interaccionar con el usuario y se han añadido al código fuente correspondiente. Básicamente se trata de añadir un botón
+               en el html y una función en el fichero Javascript que capture el evento de hacer click en el botón y empiece a reproducir el video.
+            </p>
+        </div>
+    </body>
+</html>
