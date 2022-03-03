@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2021-2022)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Lucas Pérez Capellán</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>4</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>
+                    En esta sesión se ha continuado trabajando en más aspectos avanzados de la librería three.js. Concretamente, se han aprendido a incluir sonidos 3D dentro de la escena, de forma que el usuario perciba cómo el sonido cambia a medida que se desplaza por la escena. Además, también se ha enseñado a seleccionar objetos en la escena 
+                    y detectar colisiones con ellos.
+                </p>
+            <h2>Ejercicio 1</h2>
+                <p>
+                   En este ejercicio se ha reutilizado la escena con los dos cubos texturizados y la rejilla del ejercicio 3 de la práctica anterior. Aquí se incuirán en los cubos dos fuentes de audio en 3D. Una se corresponderá con una melodía de música electrónica y otra con los ladridos de un perro. Para lograr esto nos serviremos de los objetos AudioListener y AudioLoader
+                   que proporciona three.js.
+                </p>
+                <iframe class="container" src="prac4-1.html" height="400px" width="100%">                    
+                </iframe>
+            <h2>Ejercicio 2</h2>
+                <p>Para mejorar la interactividad de las escenas 3D resulta interesante poder seleccionar objetos de la misma, por lo que se añadirá a la cámara la psoibilidad de seleccionar las dos cajas de la escena. Para ello es necesario emplear un objeto de tipo Raycaster. Su funcionamiento se basa en trazar rayos en el bucle de renderizado con el fin de actualizar el objeto
+                   intersecado actual en caso de que lo hubiese.</p>
+                <iframe class="container" src="prac4-2.html" height="400px" width="100%">
+                    Escena 2
+                </iframe>
+            <h2>Ejercicio 3</h2>
+                <p>En el tercer ejercicio se ha de dotar a la escena de una mayor interactividad, es decir, la posibilidad de pulsar sobre la barra espaciadora cuando el ratón se encuentra sobre una de las cajas de la escena. Cada vez que se pulse la barra espaciadora se activará y desactivará el sonido que emiten y además se cambiará la textura del cubo pulsado.</p>
+                <iframe class="container" src="prac4-3.html" height="400px" width="100%">
+                    Escena 3
+                </iframe>
+            <h2>Ejercicio 4</h2>
+                <p>
+                   En este último ejericio el objetivo será añadir la capacidad de detectar colisiones en la escena para que cuando la cámara choque contra una de las cajas no las atraviese como si no fuesen objetos sólidos. El primer paso ha de ser definir todos los posibles movimientos que puede realizar la cámara a través de la escena. Para detectar dichas colisiones se deben trazar rayos 
+                   a cada una de las direcciones. esto se ha de realizar en el bucle de renderizado. Una vez se ha detectado la colisión, se debe deshacer el último movimiento de la cámara para así lograr que no atraviese la superficie de la caja.
+                </p>
+                <iframe class="container" src="prac4-4.html" height="400px" width="100%">
+                    Escena 4
+                </iframe>
+            <h2>Dificultades encontradas</h2>
+            <p>
+               Siguiendo con la línea de la práctica anterior, esta me ha parecido más sencilla de completar que las dos primeras. Entiendo que puede ser debido a que voy superando la curva de aprendizaje de WebGL y los nuevos conceptos me resultan más fáciles de comprender.
+               <br>
+               Respecto a nivel de programación, las principales dificultades que me surgieron durante la realización de la práctica fueron pequeñas erratas de código sin importancia. Sólo destacar que el trozo de código del ejercicio 3 para realizar el cambio de texturas fue lo más "desafiante".
+               <br>
+               Por otro lado si he tenido a la hora de reproducir audio en el navegador Chromium. Pero el pasarme a Firefox todo pareció funcionar correctamente. 
+            </p>
+        </div>
+    </body>
+</html>
