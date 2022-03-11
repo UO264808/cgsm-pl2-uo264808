@@ -1,7 +1,8 @@
 {
-  "name": "sesion5",
+  "name": "sesion6",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
@@ -17,7 +18,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "three": "^0.138.3"
-  },
-  "description": ""
+    "three": "^0.138.3",
+    "webrtc-adapter": "^8.1.1"
+  }
 }
