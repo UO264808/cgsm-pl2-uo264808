@@ -15,7 +15,7 @@
                 </tr>
                 <tr>
                     <th>Práctica:</th>
-                    <td>4</td> 
+                    <td>6</td> 
                 </tr>
             </table>
         </div>
@@ -23,42 +23,46 @@
             <h1>Memoria</h1>
             <h2>Descripción de la práctica</h2>
                 <p>
-                    En esta sesión se ha continuado trabajando en más aspectos avanzados de la librería three.js. Concretamente, se han aprendido a incluir sonidos 3D dentro de la escena, de forma que el usuario perciba cómo el sonido cambia a medida que se desplaza por la escena. Además, también se ha enseñado a seleccionar objetos en la escena 
-                    y detectar colisiones con ellos.
+                    En esta sesión se han desarrollado una serie de ejercicios con el fin de ejemplificar la utilización de WebRTC para realizar llamadas de audio y video.
+                    <br>
+                    Esta tecnología permite integrar RTC (Real Time Communications) en el navegador sin requerir ningún software adicional, permitiendo el desarrollo de aplicaciones multiplataforma de una forma muy simple.
                 </p>
             <h2>Ejercicio 1</h2>
                 <p>
-                   En este ejercicio se ha reutilizado la escena con los dos cubos texturizados y la rejilla del ejercicio 3 de la práctica anterior. Aquí se incuirán en los cubos dos fuentes de audio en 3D. Una se corresponderá con una melodía de música electrónica y otra con los ladridos de un perro. Para lograr esto nos serviremos de los objetos AudioListener y AudioLoader
-                   que proporciona three.js.
+                    En este primer ejercicio se realiza una página web que permite capturar los frames de la cámara web del equipo. En el script de Javascript asociado a dicha página se incluye código que permite activar la cámara web y redirige el
+                    flujo a un elemento video del documento html.
                 </p>
-                <iframe class="container" src="prac4-1.html" height="400px" width="100%">                    
+                <iframe class="container" src="prac6-1.html" height="400px" width="100%">                    
                 </iframe>
             <h2>Ejercicio 2</h2>
-                <p>Para mejorar la interactividad de las escenas 3D resulta interesante poder seleccionar objetos de la misma, por lo que se añadirá a la cámara la psoibilidad de seleccionar las dos cajas de la escena. Para ello es necesario emplear un objeto de tipo Raycaster. Su funcionamiento se basa en trazar rayos en el bucle de renderizado con el fin de actualizar el objeto
-                   intersecado actual en caso de que lo hubiese.</p>
-                <iframe class="container" src="prac4-2.html" height="400px" width="100%">
+                <p>
+                    En este ejercicio, se toma como punto de partida el ejercicio anterior, al que se le añadirá la posibilidad de guardar a disco algún frame capturado por la cámara, como si de una cámar de foto se tratase.
+                </p>
+                <iframe class="container" src="prac6-2.html" height="400px" width="100%">
                     Escena 2
                 </iframe>
             <h2>Ejercicio 3</h2>
-                <p>En el tercer ejercicio se ha de dotar a la escena de una mayor interactividad, es decir, la posibilidad de pulsar sobre la barra espaciadora cuando el ratón se encuentra sobre una de las cajas de la escena. Cada vez que se pulse la barra espaciadora se activará y desactivará el sonido que emiten y además se cambiará la textura del cubo pulsado.</p>
-                <iframe class="container" src="prac4-3.html" height="400px" width="100%">
+                <p>El objetivo de este ejercicio es lograr la comunicación en tiempo real dentro de una misma página web, ilustrando el funcionamiento de PeerConnection. Resulta de suma importancia la implementación de tres funciones:
+                    <ol>
+                        <li>Start: Función que permite arrancar el servicio de captura de video local.</li>
+                        <li>Call: Función encargada de enviar los flujos de datos a remote.</li>
+                        <li>Hangup: Función cuya misión es finalizar el servicio de llamada.</li>
+                    </ol>
+                </p>
+                <iframe class="container" src="prac6-3.html" height="400px" width="100%">
                     Escena 3
                 </iframe>
             <h2>Ejercicio 4</h2>
                 <p>
-                   En este último ejericio el objetivo será añadir la capacidad de detectar colisiones en la escena para que cuando la cámara choque contra una de las cajas no las atraviese como si no fuesen objetos sólidos. El primer paso ha de ser definir todos los posibles movimientos que puede realizar la cámara a través de la escena. Para detectar dichas colisiones se deben trazar rayos 
-                   a cada una de las direcciones. esto se ha de realizar en el bucle de renderizado. Una vez se ha detectado la colisión, se debe deshacer el último movimiento de la cámara para así lograr que no atraviese la superficie de la caja.
+                   Este último ejercicio se trata de una modificación del ejercicio 2 de la práctica 2 en el que aparecía en la escena un rectángulo girando sobre si mismo mostrando un video. En estecaso la variación será que la textura en vez de ser un video
+                   será que la textura se obtenga a partir de lo capturado con la cámara web de equipo.
                 </p>
-                <iframe class="container" src="prac4-4.html" height="400px" width="100%">
+                <iframe class="container" src="prac6-4.html" height="400px" width="100%">
                     Escena 4
                 </iframe>
             <h2>Dificultades encontradas</h2>
             <p>
-               Siguiendo con la línea de la práctica anterior, esta me ha parecido más sencilla de completar que las dos primeras. Entiendo que puede ser debido a que voy superando la curva de aprendizaje de WebGL y los nuevos conceptos me resultan más fáciles de comprender.
-               <br>
-               Respecto a nivel de programación, las principales dificultades que me surgieron durante la realización de la práctica fueron pequeñas erratas de código sin importancia. Sólo destacar que el trozo de código del ejercicio 3 para realizar el cambio de texturas fue lo más "desafiante".
-               <br>
-               Por otro lado si he tenido a la hora de reproducir audio en el navegador Chromium. Pero el pasarme a Firefox todo pareció funcionar correctamente. 
+                La realización de la práctica trnasucurrió sin grandes dificultades. Reseñando tan sólo las funciones a implementar del ejercicio 3 debido a una mayor complejidad de conceptos respecto a los demás ejercicios.
             </p>
         </div>
     </body>
